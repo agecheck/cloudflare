@@ -13,13 +13,7 @@ This repository contains configuration examples and a sample Cloudflare Worker f
 
 3. write the rule.  See below for standard patterns based on the content of your website and current laws
 ~~~
-(http.request.full_uri wildcard r"")
-and
-(
-  ip.src.country eq "FR"
-  or ip.src.country eq "GB"
-  or ip.src.country eq "DE"
-)
+ip.src.country in {"FR" "GB"}
 ~~~
 
 4.  Then...
@@ -45,11 +39,7 @@ source:
 Therefore, the following setting is suggested:
 
 ~~~
-(
-  ip.src.country eq "FR"
-  or ip.src.country eq "GB"
-  or ip.src.country eq "DE"
-)
+ip.src.country in {"FR" "GB"}
 ~~~
 
 ### Social Media Content
@@ -59,11 +49,7 @@ As of February 2026, the following countries require age verificaton for social 
 Therefore, the following setting is suggested:
 
 ~~~
-(
-  ip.src.country eq "FR"
-  or ip.src.country eq "GB"
-  or ip.src.country eq "DE"
-)
+ip.src.country in {"FR" "GB"}
 ~~~
 
 ### Gambling Content
@@ -73,11 +59,7 @@ As of February 2026, the following countries require age verificaton for website
 Therefore, the following setting is suggested:
 
 ~~~
-(
-  ip.src.country eq "FR"
-  or ip.src.country eq "GB"
-  or ip.src.country eq "DE"
-)
+ip.src.country in {"FR" "GB"}
 ~~~
 
 ### Tobacco Content
@@ -87,11 +69,7 @@ As of February 2026, the following countries require age verificaton for website
 Therefore, the following setting is suggested:
 
 ~~~
-(
-  ip.src.country eq "FR"
-  or ip.src.country eq "GB"
-  or ip.src.country eq "DE"
-)
+ip.src.country in {"FR" "GB"}
 ~~~
 
 ### Alcohol Content
@@ -101,11 +79,7 @@ As of February 2026, the following countries require age verificaton for website
 Therefore, the following setting is suggested:
 
 ~~~
-(
-  ip.src.country eq "FR"
-  or ip.src.country eq "GB"
-  or ip.src.country eq "DE"
-)
+ip.src.country in {"FR" "GB"}
 ~~~
 
 # Important Disclaimer
