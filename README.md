@@ -2,6 +2,18 @@
 
 This repository contains configuration examples and a sample Cloudflare Worker for injecting an X-Age-Gate header to enable geo-targeted age enforcement. The included settings are compatible with Cloudflare’s free tier.
 
+## Age-Verification Laws Covered
+
+| Jurisdiction        | Law / Authority                              |
+|--------------------|-----------------------------------------------|
+| European Union     | Digital Services Act (DSA)                    |
+| United Kingdom     | Online Safety Act 2023                        |
+| France             | ARCOM enforcement framework                   |
+| United States      | State age-verification laws (varies by state) |
+| Australia          | Online Safety Act 2021                        |
+
+---
+
 ## Country based header injection
 
 1. On Cloudflare dashboard, make a new Response Header Transform Rule
@@ -42,6 +54,21 @@ Therefore, the following setting is suggested:
 ip.src.country in {"FR" "GB"}
 ~~~
 
+#### Adult Content – Age-Verification Laws
+
+| Jurisdiction              | Law / Authority                                  | Minimum Age |
+|--------------------------|---------------------------------------------------|-------------|
+| European Union           | Digital Services Act (DSA)                        | 18+         |
+| United Kingdom           | Online Safety Act 2023                            | 18+         |
+| France                   | ARCOM enforcement framework (Audio-visual Code)   | 18+         |
+| United States – Texas    | HB 1181                                           | 18+         |
+| United States – Louisiana| Act 440                                           | 18+         |
+| United States – Utah     | SB 287                                            | 18+         |
+| United States – Arkansas | Act 612                                           | 18+         |
+| United States – Mississippi | HB 1315                                      | 18+         |
+| Australia                | Online Safety Act 2021                            | 18+         |
+---
+
 ### Social Media Content
 
 As of February 2026, the following countries require age verificaton for social media:  
@@ -81,6 +108,8 @@ Therefore, the following setting is suggested:
 ~~~
 ip.src.country in {"FR" "GB"}
 ~~~
+
+---
 
 # Important Disclaimer
 
