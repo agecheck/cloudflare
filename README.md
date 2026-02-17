@@ -13,7 +13,7 @@ This repository contains configuration examples and a sample Cloudflare Worker f
 
 3. write the rule.  See below for standard patterns based on the content of your website and current laws
 ~~~
-(http.request.uri.path wildcard "*")
+(http.request.full_uri wildcard r"")
 and
 (
   ip.src.country eq "FR"
